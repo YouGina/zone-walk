@@ -2,9 +2,9 @@
 A simple Bash script that demonstrates DNSSEC zone walking by querying NSEC records for a given DNS zone. The script uses the `dig` command to retrieve NSEC records and prints the chain of existing names in the zone.
 
 # Features
-- **DNSSEC Detection**: Uses DNSSEC (+dnssec) to query NSEC records.
-- **Zone Walking**: Retrieves and displays the chain of NSEC records from the provided domain.
-- **Simple Implementation**: Uses common command-line tools (dig, grep, awk) and is easy to understand and modify.
+- **DNSSEC detection**: Uses DNSSEC (+dnssec) to query NSEC records.
+- **Zone walking**: Retrieves and displays the chain of NSEC records from the provided domain.
+- **Simple implementation**: Uses common command-line tools (dig, grep, awk) and is easy to understand and modify.
 
 # Usage
 Run the script with the target domain as the first argument:
@@ -19,9 +19,9 @@ Run the script with the target domain as the first argument:
 
 # How It Works
 
-1. Determine Nameserver:
+1. Determine nmeserver:
     - Uses dig +short ns $zone | head -n1 to retrieve the first nameserver for the given domain.
-1. Zone Walking Loop:
+1. Zone walking loop:
     - Initializes the current domain as the target zone.
     - In a loop, queries for the NSEC record using:
     ```bash
