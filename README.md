@@ -19,7 +19,7 @@ Run the script with the target domain as the first argument:
 
 # How It Works
 
-1. Determine nmeserver:
+1. Determine nameserver:
     - Uses dig +short ns $zone | head -n1 to retrieve the first nameserver for the given domain.
 1. Zone walking loop:
     - Initializes the current domain as the target zone.
